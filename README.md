@@ -125,7 +125,7 @@ Para isso, disponibilizamos esse [protótipo do Figma](xxxx) para lhe ajudar !
 
 ## 1. Complete a função que renderiza para o usuario a opção de coletar sua localização
 
-**PRIORIDADE 0**
+**PRIORIDADE**
 
 Criar a tela que obtenha a localização do usuario, onde a pessoa que joga deve conseguir escolher sua localidade nos inputs ou obter atráver da api de localização da propria google e o botão de ("Continuar") deve estar desabilitado caso não tenha alguma dessas informações.
   
@@ -175,142 +175,43 @@ Criar a tela que obtenha a localização do usuario, onde a pessoa que joga deve
 
 ---
 
-## 3. Crie um botão que leva a pessoa para tela de configuração
+## 3. Implementando a página Home
+
+>Obs: A página inicial tem o caminho `src/pages/Home.js`
 
   **PRIORIDADE 1**
   
-  A tela inicial deve conter um botão que leve para a configuração do jogo
-
+  A tela inicial deve conter um Header (Com informações das redes sociais), um carrosel (Com as personas criadas pelos grupos de pesquisa e design) e um painel de exposição de noticias da defensoria.
+ 
 <details>
   <summary><strong> Observações técnicas:</strong></summary>
 
-  * O botão que leva a pessoa a tela de configurações deve possuir o atributo `data-testid` com o valor `btn-settings`
-  * A tela de configurações deve possuir um título com o atributo `data-testid` contendo o valor `settings-title`
+  * será...
 </details>
 <br /><details>
   <summary><strong>O que será verificado</strong></summary>
 
-  * Será validado se o botão existe na página
-  * Será validado se a tela de configurações possui um título
+  * será...
 </details>
 
 ---
 
-## 4. Desenvolva testes para atingir 90% de cobertura da tela de Login
+## 4. Desenvolvemos a estrutura do projeto e criamos funções base para auxiliar no entendimento de como funciona a página
 
-> :bulb: Obs: Neste requisito vamos cobrir a nossa tela de login com testes unitários utilizando a biblioteca [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/), aproveite essa oportunidade para colocar em prática o [Desenvolvimento Orientado por Testes](https://blog.betrybe.com/tecnologia/tdd-test-driven-development/)
+> :bulb: Obs: É importante entender os conceitos de programação modular em React, recomendo que todos assistam a videos do tema e se interem nisso.
 
-  **PRIORIDADE 1**
-  
-  Cobertura de testes da tela de Login
-
-<details>
-  <summary><strong> Observações técnicas:</strong></summary>
-
-  * Os testes criados por você não irão influenciar os outros requisitos no avaliador. Você deverá desenvolver seus testes unitários/integração usando a biblioteca React Testing Library, enquanto o avaliador usará a biblioteca [Cypress](https://docs.cypress.io/) para avaliar os requisitos, inclusive os de cobertura.
-  * Para os testes passarem é necessário que a página de Login tenha o caminho `src/pages/Login.js`
-</details>
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  * Será validado se ao executar `npm run test-coverage` é obtido os seguintes resultados:
-      * `% Funcs` e `% Lines` da linha `Login` é maior ou igual a 90.
-</details>
-
----
-
-## Tela de jogo
-
->Obs: É necessário que a página de Game tenha o caminho `src/pages/Game.js`
-
-## 5. Crie um _header_ que deve conter as informações da pessoa jogadora
+> :hand: Obs: Vale ressaltar que dentro de toda função existem comentários e instruções em niveis mais detalhados do que aquele componente deve fazer.
 
   **PRIORIDADE 1**
   
-  O _header_ deve conter as informações sobre a pessoa jogadora, como a imagem do Gravatar, o nome e o placar
+  Compreender como cada função é independente da outra e como adaptar os codigos de forma padrão
 
 <details>
   <summary><strong> Observações técnicas:</strong></summary>
 
-  * A imagem do perfil vinda do Gravatar em um elemento que deve possuir o atributo `data-testid` com o valor `header-profile-picture`
-  * O nome da pessoa em um elemento que deve possuir o atributo `data-testid` com o valor `header-player-name`
-  * O placar zerado em um elemento que deve possuir o atributo `data-testid` com o valor `header-score`
+  * Ultilizaremos os padrões de código limpo.
 </details>
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  * Será validado se a imagem do Gravatar está presente no header
-  * Será validado se o nome da pessoa está presente no header
-  * Será validado se o placar zerado está presente no header
-</details>
-
----
-
-## 6. Crie a página de jogo que deve conter as informações relacionadas à pergunta
-
-  **PRIORIDADE 1**
-  
-  Deve ser feita a requisição para a API para popular o jogo com as perguntas, categoria e alternativas
-
-<details><summary> Ilustração:</summary>
-
-  ![img](req6.gif)
-</details><br />
-<details>
-  <summary><strong> Observações técnicas:</strong></summary>
-
-  * Acessar o jogo com um token inválido leva a um logout, excluindo o token do `localStorage` e redirecionando a página para a tela de login
-  * A pergunta e suas alternativas de resposta devem ser recebidas da API do Trivia
-  * Apenas **uma** pergunta deve ser exibida por vez
-  * A categoria da pergunta (campo _category_) deve ser exibida em um elemento com o atributo `data-testid` com o valor `question-category` para a pessoa que está jogando
-  * O texto da pergunta (campo _question_) deve ser exibido em um elemento com o atributo `data-testid` com o valor `question-text` para a pessoa que está jogando
-  * <details><summary> O texto com as alternativas devem ser exibidos seguindo as regras abaixo:</summary>
-
-    * Os botões das alternativas devem ser elementos irmãos; ou seja, não podem estar dentro de outra tag
-    * O elemento com a alternativa correta deve possuir o atributo `data-testid` com o valor `correct-answer`
-    * Os elementos com as alternativas incorretas devem possuir o atributo `data-testid` com o valor `wrong-answer-${index}`, com `${index}` iniciando com o valor `0`
-    * As alternativas devem estar dentro de uma tag que possui o atributo `data-testid` com o valor `answer-options`
-    * As alternativas devem ser exibidas em ordem aleatória
-    * Dica: utilize botões (`<button/>`) para as alternativas
-  </details>
-</details>
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  * Será validado se o token inválido é excluído e a aplicação é redirecionada
-  * Será validado se as respostas da API são tratadas corretamente
-  * Será validado se a categoria da pergunta está presente
-  * Será validado se o texto da pergunta está presente
-  * Será validado se as alternativas estão presentes
-  * Será validado se a quantidade de alternativas corretas é 1
-  * Será validado se as alternativas estão posicionadas em ordem aleatória
-</details>
-
----
-
-## 7. Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas
-
-  **PRIORIDADE 2**
-  
-  Ao responder a pergunta, se a alternativa for correta, deve ficar verde, caso contrário, vermelha
-
-<details>
-  <summary><strong> Observações técnicas:</strong></summary>
-
-  * Utilize a propriedade css `border` com o valor `3px solid rgb(6, 240, 15)` para a alternativa correta.
-  * Utilize a propriedade css `border` com o valor `3px solid red` para as alternativas incorretas.
-</details>
-
-<br /><details>
-  <summary><strong>O que será verificado</strong></summary>
-
-  * Será validado se a cor da alternativa correta é "rgb(6, 240, 15)" ao acertar a questão
-  * Será validado se a cor das alternativas incorretas é definida como "red" ao acertar a questão.
-  * Será validado se a cor da alternativa correta é "rgb(6, 240, 15)" ao errar a questão
-  * Será validado se a cor das alternativas incorretas é definida como "red" ao errar a questão
-</details>
+<br />
 
 ---
 
