@@ -121,34 +121,34 @@ Para isso, disponibilizamos esse [protótipo do Figma](xxxx) para lhe ajudar !
 
 ## Tela de início
 
->Obs: É necessário que a página de Login tenha o caminho `src/pages/Landing.js`
+>Obs: É necessário que a página de Login tenha o caminho `src/components/Carrousel.js`
 
-## 1. Complete a função que renderiza para o usuario a opção de coletar sua localização
+## 1. Complete a função de componente que renderiza para o usuario as personas criadas pelo time de pesquisa
 
 **PRIORIDADE**
 
-Criar a tela que obtenha a localização do usuario, onde a pessoa que joga deve conseguir escolher sua localidade nos inputs ou obter atráver da api de localização da propria google e o botão de ("Continuar") deve estar desabilitado caso não tenha alguma dessas informações.
+Criar o componente de carrosel, que através do array de objetos criado no arquivo persona.js, no caminho `src/Utils/mocks/persona.js`.
   
-:bulb: Pesquisar sobre essa forma de obter a localição do usuario através de API's externas!
+:bulb: Se preciso, pesquisar como ultilizar a função .map() para este caso!
 
 :warning: **Lembre-se das observações técnicas descritas acima.**
 
 <details>
   <summary><strong> Observações técnicas:</strong></summary>
 
-  * A pessoa que chega na pagina deve receber a opção de ativar a localização do dispositivo e compartilhar conosco.
-  * A pessoa que joga deve conseguir selecionar uma cidade na lista de cidades disponiveis por input select.
-  * O botão "Continuar" deve ser desabilitado caso não tenhamos acesso a informação de localidade da pessoa.
-  * O botão "Continuar" que leva a pessoa a pessoa para a proxima sessão, deve ter a classe "travel-btn"`
+  * O componente deve renderizar as personas em formato de carrosel.
+  * Independente do numero de personas que estiverem no array de objetos, construir a logica para que apenas os 5 primeiros sejam visiveis, e que o restante será visto apenas se o usuario clicar em ver mais.
+  * O botão "Ver mais" deve ser invisivel ate que o usuario chegue no ultimo painel do carrosel.
+  * Os botões ">" e "<" devem levar o usuario para a proxima persona ou anterior`
 </details>
 <br /><details>
   <summary><strong>O que será verificado</strong></summary>
 
-  * Será validado se a pergunta de usar a localidade do usuario é acionada ao carregar a pagina.
-  * Será validado se é possível selecionar uma cidade na lista de cidades disponiveis.
-  * Será validado se o botão "Continuar" está disponivel apenas após conseguir as informações de localidade.
-  * Será validado que as informações de localidade são verificadas por outro componente, que avalia se as localidades do usuario e da carreta são as mesmas. 
-  * Será validado que ao clicar no botão "Continuar" o usuario é redirecionado ao caminho /Home da pagina, com a informação de que o usuario está no mesmo local da carreta, ou não está no mesmo local.
+  * Será validado se o componente é renderizado corretamente.
+  * Será validado se as 5 personas são exibidas.
+  * Será validado se o botão ver mais aparece quando o usuario chega no ultimo carrosel.
+  * Será validado que ao clicar no botão ver mais, o usuario possa ver por completo todos os items do carrosel. 
+  * Será validado que ao clicar no botão ">" ou "<" o usuario pode visualizar novas personas.
 
 </details>
 
