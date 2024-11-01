@@ -22,6 +22,7 @@ function Carrousel() {
         return (
           <div key={index} className="carousel-item">
             <h3>{name}</h3>
+            <h4>teste</h4>
             <p>{personaHistory}</p>
             <img src={srcImage} alt={`${name} profile`} />
           </div>
