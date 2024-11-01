@@ -8,6 +8,19 @@ import { personas } from '../Utils/mocks/persona'
 // Dica de ouro : Em react é possivel usar funções javascript para realizar ações mais complexas.
 // Normalmente neste espaço abaixo
 
+var swiper = new Swiper(".swiper", {
+  cssMode: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  keyboard: true,
+});
+
 
 
 function Carrousel() {
@@ -16,17 +29,30 @@ function Carrousel() {
   // O `map` pode ser usado diretamente no `return` para gerar o conteúdo.
   return (
     <div className="carousel">
-      <h2>Carrousel</h2>
-      {personas.map((elementoDoArray, index) => {
-        const { name, personaHistory, srcImage } = elementoDoArray;
-        return (
-          <div key={index} className="carousel-item">
-            <h3>{name}</h3>
-            <p>{personaHistory}</p>
-            <img src={srcImage} alt={`${name} profile`} />
+      <span>SLIDER</span>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="project-img">
+              <img src="./img/foto_01.png" alt="Foto 01" />
+            </div>
           </div>
-        );
-      })}
+          <div class="swiper-slide">
+            <div class="project-img">
+              <img src="./img/foto_02.png" alt="Foto 02" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-img">
+              <img src="./img/foto_03.png" alt="Foto 03" />
+            </div>
+          </div>
+        </div>
+      
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
     </div>
   );
 }
