@@ -1,13 +1,15 @@
 import Carrousel from './Components/Carrousel';
+import Copy from './Components/Copy';
+import NavBar from './Components/NavBar';
 import './Style/App.css';
 
 function App() {
   return (
-    // Aqui vai o html que resolve x coisa
     <div className="App">
+      <NavBar />
       <Carrousel />
+      <Copy />
     </div>
-    // Aqui acaba o html
   );
 }
 

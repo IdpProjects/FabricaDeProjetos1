@@ -1,5 +1,3 @@
-// Aqui devem ser feitas as alterações para personas
-
 export const personas = [
 {
     name: "Sandra",
