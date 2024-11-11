@@ -11,10 +11,10 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import DefensoriaLogo from '../Style/Icons/Logo da defensoria publica 32x32.png'
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Início', 'Serviços', 'Unidades', 'Atendimento ao Cidadão', 'Notícias'];
+const settings = ['Perfil', 'Conta', 'Preferencias', 'Sair'];
 
 function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -39,7 +39,6 @@ function NavBar() {
     <AppBar position="static" sx={{ backgroundColor: "whitesmoke" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -55,7 +54,7 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            <img src={ DefensoriaLogo } alt='logo'></img>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -92,7 +91,6 @@ function NavBar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -109,14 +107,14 @@ function NavBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
-          </Typography>
+            <img src={ DefensoriaLogo } alt='logo'></img>
+            </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {page}
               </Button>

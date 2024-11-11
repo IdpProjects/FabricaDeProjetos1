@@ -4,6 +4,8 @@ import { personas } from '../Utils/mocks/persona';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import "../Style/Components/carrousel.css"; // Certifique-se de criar e estilizar este arquivo CSS
+import "../Style/Components/teste.css"
+import { Button, Card, Container, Typography } from '@mui/material';
 
 function Carrousel() {
   const [sliderRef, setSliderRef] = useState(null);
@@ -35,29 +37,35 @@ function Carrousel() {
 
   return (
     <div className="carousel">
-      <h2>Carrousel</h2>
       <Slider ref={setSliderRef} {...settings}>
         {personas.map((elementoDoArray, index) => {
           const { name, personaHistory, srcImage } = elementoDoArray;
           return (
-            <div key={index} className="carousel-item">
-              <h3>{name}</h3>
-              <p>{personaHistory}</p>
-              <img src={srcImage} alt={`${name} profile`} />
-            </div>
+            <Card sx={{ display: "flex" }} className='body_container'>
+            <Container component="div" className='container'>
+      <div className='character' style={{ display: 'flex', flexDirection: 'column' }}>
+      <img src='https://www.defensoria.df.gov.br/wp-content/uploads/2022/10/cropped-DP_DF-Manual-de-Identidade-Visual.png' alt='logoDp'></img>
+      <img src={srcImage} alt='guy' ></img>
+      </div>
+      <div className='speech-bubble'>
+      <Typography> { `Me chamo ${name}, ${personaHistory}` } </Typography>
+      </div>
+    </Container>
+        <div className='options carousel-buttons'>
+        <Button onClick={handleNext}>Não parece o meu problema!</Button>
+        <Button onClick={handlePopup}>Me parece o meu problema!</Button>
+        </div>
+        <Typography className='footer' sx={{ justifyContent: "flex-end" }}> {`${index + 1}/5`}  </Typography>
+            </Card>
           );
         })}
       </Slider>
-      <div className="carousel-buttons">
-        <button onClick={handleNext}>Próximo</button>
-        <button onClick={handlePopup}>Abrir Pop-up</button>
-      </div>
       {showPopup && (
         <div className="popup">
           <div className="popup-content">
             <h3>{currentPersona?.name}</h3>
             <p>{currentPersona?.personaHistory}</p>
-            <button onClick={closePopup}>Fechar</button>
+            <Button onClick={closePopup}>Fechar</Button>
           </div>
         </div>
       )}
