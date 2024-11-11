@@ -1,6 +1,5 @@
 .carousel {
     width: 100%;
-    margin: auto;
     text-align: center;
   }
   
@@ -8,18 +7,7 @@
     text-align: center;
   }
   
-  .carousel-item img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .carousel-buttons {
-    margin-top: 20px;
-  }
-  
   .carousel-buttons button {
-    margin: 0 10px;
-    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     background-color: #D6D6D6;

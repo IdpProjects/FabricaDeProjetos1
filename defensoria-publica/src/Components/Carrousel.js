@@ -43,9 +43,10 @@ function Carrousel() {
           return (
             <Card sx={{ display: "flex" }} className='body_container'>
             <Container component="div" className='container'>
-      <div className='character' style={{ display: 'flex', flexDirection: 'column' }}>
-      <img src='https://www.defensoria.df.gov.br/wp-content/uploads/2022/10/cropped-DP_DF-Manual-de-Identidade-Visual.png' alt='logoDp'></img>
-      <img src={srcImage} alt='guy' ></img>
+      <div className='character' style={{ display: 'flex', flexDirection: 'column', height: "40%" }}>
+      {/* <img src='https://www.defensoria.df.gov.br/wp-content/uploads/2022/10/cropped-DP_DF-Manual-de-Identidade-Visual.png' 
+      alt='logoDp' style={{ width: "30vw", height: "5vh" }}></img> */}
+      <img src={srcImage} alt='guy' style={{ width: "30vw", height: "60vh" }}></img>
       </div>
       <div className='speech-bubble'>
       <Typography> { `Me chamo ${name}, ${personaHistory}` } </Typography>
