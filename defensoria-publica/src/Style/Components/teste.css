@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 51vh;
+  height: 60vh;
+  width: 50vw;
+  /* height: 51vh; para dispositivos menores */
   margin-top: 1em;
   padding: 1em;
   background-color: #1B3027;
@@ -72,6 +74,6 @@
 
 .footer {
   display: flex;
-  flex-grow: 1;
-  margin-right: 25px;
+  /* flex-grow: 0; */
+  /* margin-right: 15px; */
 }
