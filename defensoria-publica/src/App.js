@@ -1,6 +1,7 @@
 import Carrousel from './Components/Carrousel';
 import Copy from './Components/Copy';
 import NavBar from './Components/NavBar';
+import Socials from './Pages/Socials';
 import './Style/App.css';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <NavBar />
       <Carrousel />
       <Copy />
+      <Socials />
     </div>
   );
 }
