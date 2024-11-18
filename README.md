@@ -14,7 +14,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - Use o comando: `git clone https://github.com/IdpProjects/FabricaDeProjetos1`.
 
   - Entre na pasta do repositório que você acabou de clonar:
-    - `cd FabricaDeProjetos1`
+    - `cd FabricaDeProjetos1/defensoria-publica`
   - Crie e Vá para a branch do seu grupo com o codigo a seguir:
     - `git checkout main-group-XX && git pull`, onde `XX` é o nome do seu grupo. Exemplos: `main-group-pesquisa1`, `main-group-pesquisa2`.
 
