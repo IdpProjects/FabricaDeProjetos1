@@ -1,7 +1,6 @@
 import React from "react";
-import "./../../Style/Programas.css"; 
-import { programas } from "./../../Utils/mocks/programas"; 
-
+import { programas } from "../Utils/mocks/programas";
+import './../Style/Components/Programas.css'; 
 function Programas() {
   return (
     <div className="programas-container">
