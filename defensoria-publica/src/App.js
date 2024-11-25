@@ -1,5 +1,4 @@
 import Carrousel from './Components/Carrousel';
-import Copy from './Components/Copy';
 import NavBar from './Components/NavBar';
 import Socials from './Pages/Socials';
 import Programas from './Components/Programas'
@@ -12,7 +11,6 @@ function App() {
       <NavBar />
       <Carrousel />
       <Programas />
-      <Copy />
       <Socials />
       
     </div>
