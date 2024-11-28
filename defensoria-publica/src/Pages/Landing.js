@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-function Landing({ setSuburb }) {
+function Landing({ setSuburb, setCity, city }) {
   const [location, setLocation] = useState({ latitude: null, longitude: null });
-  const [city, setCity] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {

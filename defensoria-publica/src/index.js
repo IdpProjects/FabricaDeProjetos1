@@ -10,15 +10,16 @@ import Landing from "./Pages/Landing";
 
 function Root() {
   const [suburb, setSuburb] = React.useState(null);
+  const [city, setCity] = React.useState(null);
 
   const router = createBrowserRouter([
     {
       path: "/home",
-      element: <App />,
+      element: <App city={city} suburb={suburb}/>,
     },
     {
       path: "/",
-      element: <Landing setSuburb={setSuburb} />,
+      element: <Landing setSuburb={setSuburb} setCity={setCity} city={city}/>,
     },
   ]);
 
