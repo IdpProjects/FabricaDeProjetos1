@@ -1,14 +1,43 @@
 import React from 'react'
-// Os css`s de pagina estarão na pasta Style/Pages/NomeDaPagina.css
-// Para importar basta digitar import "./Style/Pages/NomeDaPagina.css"
+import NewsGrid from '../Components/NewsGrid';
 
+const newsData = [
+  {
+    title: '----',
+    summary: '-',
+    image: 'https://via.placeholder.com/300',
+  },
+  {
+    title: '----',
+    summary: '-',
+    image: 'https://via.placeholder.com/300',
+  },
+  {
+    title: '-----',
+    summary: '-',
+    image: 'https://via.placeholder.com/300',
+  },
+  {
+    title: '----',
+    summary: '-',
+    image: 'https://via.placeholder.com/300',
+  },
+  {
+    title: '----',
+    summary: '-',
+    image: 'https://via.placeholder.com/300',
+  },
+  {
+    title: '------',
+    summary: '-',
+    image: 'https://via.placeholder.com/300',
+  },
+];
 function News() {
   return (
-    // Dentro deste Return, vão os codigos HTML, que serão lidos e interpretados pelo React.
-    // Nesta Pagina, devem ser chamados os componentes que compõem a pagina Home.
-    // Um exemplo será a NavBar, que será chamada em todas as paginas, ja que toda pagina terá o elemento de navegação
-
-    <div>News</div>
+        <div className="app">
+          <NewsGrid news={newsData} />
+        </div>
   )
 }
 

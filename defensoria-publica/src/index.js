@@ -8,19 +8,25 @@ import "./Style/index.css";
 import App from "./App";
 import Landing from "./Pages/Landing";
 
-const router = createBrowserRouter([
-  {
-    path: "/home",
-    element: <App />,
-  },
-  {
-    path: "/",
-    element: <Landing />
-  }
-]);
+function Root() {
+  const [suburb, setSuburb] = React.useState(null);
+
+  const router = createBrowserRouter([
+    {
+      path: "/home",
+      element: <App />,
+    },
+    {
+      path: "/",
+      element: <Landing setSuburb={setSuburb} />,
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
+}
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Root />
   </React.StrictMode>
 );

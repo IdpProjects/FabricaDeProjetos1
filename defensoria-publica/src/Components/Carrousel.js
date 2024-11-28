@@ -44,7 +44,6 @@ function Carrousel() {
             <Card sx={{ display: "flex" }} className='body_container' key={index}>
             <Container component="div" className='container'>
       <div className='character' style={{ display: 'flex', flexDirection: 'column', height: "40%" }}>
-        {console.log(srcImage)}
       <img src={srcImage} alt='guy' style={{ width: "30vw", height: "60vh" }}></img>
       </div>
       <div className='speech-bubble'>
