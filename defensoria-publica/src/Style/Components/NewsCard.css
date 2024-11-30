@@ -52,17 +52,20 @@
   .news-card-title {
     font-size: clamp(0.9rem, 2vw, 1.2rem); /* Responsivo */
     font-weight: bold;
-    margin-bottom: 10px;
-    line-height: 1.2em;
-    white-space: nowrap;
+    line-height: 2em;
+    white-space: normal; /* Permitir que o título tenha múltiplas linhas */
     overflow: hidden;
     text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limitar o título a no máximo 2 linhas */
+    -webkit-box-orient: vertical;
     color: inherit; /* Herda a cor do card */
   }
   
+  
   .news-card-summary {
     font-size: clamp(0.8rem, 1.8vw, 1rem); /* Responsivo */
-    line-height: 1.4em;
+    line-height: 1em;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;

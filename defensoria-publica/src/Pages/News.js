@@ -1,42 +1,11 @@
 import React from 'react'
 import NewsGrid from '../Components/NewsGrid';
+import { news } from '../Utils/mocks/news';
 
-const newsData = [
-  {
-    title: '----',
-    summary: '-',
-    image: 'https://via.placeholder.com/300',
-  },
-  {
-    title: '----',
-    summary: '-',
-    image: 'https://via.placeholder.com/300',
-  },
-  {
-    title: '-----',
-    summary: '-',
-    image: 'https://via.placeholder.com/300',
-  },
-  {
-    title: '----',
-    summary: '-',
-    image: 'https://via.placeholder.com/300',
-  },
-  {
-    title: '----',
-    summary: '-',
-    image: 'https://via.placeholder.com/300',
-  },
-  {
-    title: '------',
-    summary: '-',
-    image: 'https://via.placeholder.com/300',
-  },
-];
 function News() {
   return (
         <div className="app">
-          <NewsGrid news={newsData} />
+          <NewsGrid news={news} />
         </div>
   )
 }

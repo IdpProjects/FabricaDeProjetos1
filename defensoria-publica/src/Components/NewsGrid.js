@@ -10,7 +10,7 @@ const NewsGrid = ({ news }) => {
           key={index} 
           title={item.title} 
           summary={item.summary} 
-          image={item.image} 
+          image={item.srcImg} 
         />
       ))}
     </div>

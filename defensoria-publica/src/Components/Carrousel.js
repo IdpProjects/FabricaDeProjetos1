@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "../Style/Components/carrousel.css"; // Certifique-se de criar e estilizar este arquivo CSS
 import "../Style/Components/teste.css"
 import { Button, Card, Container, Typography } from '@mui/material';
+import Orientation from './Orientations';
 
 function Carrousel() {
   const [sliderRef, setSliderRef] = useState(null);
@@ -13,7 +14,7 @@ function Carrousel() {
   const [currentPersona, setCurrentPersona] = useState(null);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -51,23 +52,16 @@ function Carrousel() {
       </div>
     </Container>
         <div className='options carousel-buttons'>
-        <Button onClick={handleNext}>Não parece o meu problema!</Button>
-        <Button onClick={handlePopup}>Me parece o meu problema!</Button>
+        <Button onClick={handleNext} className="secondary" >Não parece o meu problema!</Button>
+        <Button onClick={() => { setCurrentPersona(elementoDoArray); handlePopup(); }}>
+    Me parece o meu problema!
+</Button>
         </div>
-        <Typography className='footer' sx={{ justifyContent: "flex-end" }}> {`${index + 1}/5`}  </Typography>
             </Card>
           );
         })}
       </Slider>
-      {showPopup && (
-        <div className="popup">
-          <div className="popup-content">
-            <h3>{currentPersona?.name}</h3>
-            <p>{currentPersona?.personaHistory}</p>
-            <Button onClick={closePopup}>Fechar</Button>
-          </div>
-        </div>
-      )}
+      {showPopup && currentPersona && <Orientation currentPersona={currentPersona} closePopup={closePopup}/>}
     </div>
   );
 }
