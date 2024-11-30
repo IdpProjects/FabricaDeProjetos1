@@ -11,12 +11,12 @@ import CarretaPop from './Components/Carreta';
 function App({city, suburb}) {
   console.log(city, suburb);
 
-  const [showCarretaPopup, setShowCarretaPopup] = useState(false); // Estado para exibir ou não o pop-up
+  const [showCarretaPopup, setShowCarretaPopup] = useState(false); 
 
 
   useEffect(() => {
     if (city === 'Brasília') {
-      setShowCarretaPopup(true); // Exibe o pop-up se a cidade for Brasília
+      setShowCarretaPopup(true); // Exibe o pop-up se a cidade for Brasília, adaptar caso a carreta esteja em outra cidade.
     }
   }, [city]);
   
@@ -29,7 +29,7 @@ function App({city, suburb}) {
       <Socials />
       {showCarretaPopup && (
         <CarretaPop
-          onClose={() => setShowCarretaPopup(false)} // Fecha o pop-up ao clicar no botão de fechar
+          onClose={() => setShowCarretaPopup(false)}
         />
       )}
     </div>

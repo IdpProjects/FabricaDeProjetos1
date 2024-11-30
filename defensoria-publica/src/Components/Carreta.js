@@ -17,6 +17,10 @@ function CarretaPop({ onClose }) {
     setShowInfo(false);
   };
 
+  const handleCloseInfo = () => {
+    setShowInfo(false);
+  };
+
   return (
     <>
       <div className="overlay"></div> {/* Camada de fundo */}
@@ -92,7 +96,7 @@ function CarretaPop({ onClose }) {
             {carretaInfo}
           </Typography>
           <Box sx={{ textAlign: "center", mt: 3 }}>
-            <Button variant="contained" color="secondary" onClick={handleClose}>
+            <Button variant="contained" color="secondary" onClick={handleCloseInfo}>
               Fechar
             </Button>
           </Box>
