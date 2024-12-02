@@ -1,7 +1,7 @@
 import React from 'react'
 // Os css`s de pagina estarão na pasta Style/Pages/NomeDaPagina.css
 // Para importar basta digitar import "./Style/Pages/NomeDaPagina.css"
-
+//testes luca 
 function Home() {
   return (
     // Dentro deste Return, vão os codigos HTML, que serão lidos e interpretados pelo React.
